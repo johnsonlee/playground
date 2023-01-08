@@ -1,0 +1,52 @@
+[versions]
+aapt2 = "8.1.1-10154469"
+android-gradle-plugin = "8.1.1"
+android-tools = "31.1.2"
+androidx-activity = "1.8.0"
+androidx-appcompat = "1.6.1"
+androidx-arch-core = "2.2.0"
+androidx-core = "1.12.0"
+androidx-collection = "1.2.0"
+androidx-lifecycle = "2.6.2"
+jackson = "2.13.4"
+kxml2 = "2.3.0"
+layoutlib = "2022.3.1-5e972ea"
+okio = "3.4.0"
+protobuf = "3.19.3"
+spring = "5.3.23"
+springboot = "2.7.5"
+
+
+[libraries]
+android-tools-build-aapt2-proto = { module = "com.android.tools.build:aapt2-proto", version.ref = "aapt2" }
+android-tools-build-gradle = { module = "com.android.tools.build:gradle", version.ref = "android-gradle-plugin" }
+android-tools-common = { module = "com.android.tools:common", version.ref = "android-tools" }
+android-tools-external-intellij-core = { module = "com.android.tools.external.com-intellij:intellij-core", version.ref = "android-tools" }
+android-tools-layoutlib-api = { module = "com.android.tools.layoutlib:layoutlib-api", version.ref = "android-tools" }
+android-tools-ninepatch = { module = "com.android.tools:ninepatch", version.ref = "android-tools" }
+android-tools-sdk-common = { module = "com.android.tools:sdk-common", version.ref = "android-tools" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-arch-core-common = { module = "androidx.arch.core:core-common", version.ref = "androidx-arch-core" }
+androidx-collection = { module = "androidx.collection:collection", version.ref = "androidx-collection" }
+androidx-constraintlayout-resolver = { module = "androidx.constraintlayout:constraintlayout-solver", version = "1.1.3" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx-core" }
+androidx-databinding-viewbinding = { module = "androidx.databinding:viewbinding", version = "7.2.2" }
+androidx-lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "androidx-lifecycle" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version.ref = "jackson" }
+jackson-module-jsonschema = { module = "com.fasterxml.jackson.module:jackson-module-jsonSchema", version.ref = "jackson" }
+kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version = "1.9.0" }
+kxml2 = { module = "net.sf.kxml:kxml2", version.ref = "kxml2" }
+layoutlib-native-jdk11 = { module = "io.johnsonlee:layoutlib-native-jdk11", version.ref = "layoutlib" }
+layoutlib-native-macosx = { module = "io.johnsonlee:layoutlib-native-macosx", version.ref = "layoutlib" }
+layoutlib-native-linux = { module = "io.johnsonlee:layoutlib-native-linux", version.ref = "layoutlib" }
+micrometer-registry-promehteus = { module = "io.micrometer:micrometer-registry-prometheus", version = "1.9.5" }
+okio = { module = "com.squareup.okio:okio-jvm", version.ref = "okio" }
+protobuf = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
+spring-boot = { module = "org.springframework.boot:spring-boot", version.ref = "springboot" }
+spring-context = { module = "org.springframework:spring-context", version.ref = "spring" }
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springboot" }
+spring-boot-starter-actuator = { module = "org.springframework.boot:spring-boot-starter-actuator", version.ref = "springboot" }
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "springboot" }
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "springboot" }
+
