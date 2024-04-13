@@ -13,7 +13,7 @@ version = "0.1.0"
 
 dependencies {
     implementation(fileTree("libs"))
-    implementation(project(":libs"))
+    implementation(project(":libs", configuration = "shadow"))
     implementation(kotlin("bom"))
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
