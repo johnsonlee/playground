@@ -5,7 +5,7 @@ Play with mobile UI on the fly.
 ## Getting Started
 
 ```bash
-./gradelew assemble && docker-compose up -d --build
+./gradlew assemble && docker-compose up -d --build
 ```
 
 ```bash
