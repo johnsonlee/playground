@@ -2,8 +2,8 @@ package io.johnsonlee.playground.rendering
 
 import com.android.layoutlib.bridge.android.BridgeContext
 import com.android.layoutlib.bridge.android.BridgeXmlBlockParser
+import io.johnsonlee.playground.sandbox.RenderData
 import io.johnsonlee.playground.sandbox.parsers.LayoutPullParser
-import io.johnsonlee.playground.util.toBase64
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -25,7 +25,7 @@ class RenderingController(
     @PostMapping("/api/render")
     fun render(
         @RequestBody params: RenderingParams
-    ): RenderingResponse {
+    ): RenderData {
         val (result, duration) = measureTimedValue {
             renderingService.render(params) { inflater, parent ->
                 val parser = LayoutPullParser.createFromClasspath("main.xml")
@@ -38,21 +38,7 @@ class RenderingController(
 
         logger.info("Rendering took $duration")
 
-        return RenderingResponse(
-            data = result.image.toBase64(params.options.format),
-            view = result.view
-        )
+        return result
     }
 
 }
-
-data class RenderingResponse(
-    /**
-     * Base64 encoded image data
-     */
-    val data: String,
-    /**
-     * The view tree
-     */
-    val view: RenderingNode,
-)

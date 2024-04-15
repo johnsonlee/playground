@@ -15,6 +15,7 @@ okio = "3.4.0"
 protobuf = "3.19.3"
 spring = "5.3.23"
 springboot = "2.7.5"
+sandbox = "1.2.0"
 
 
 [libraries]
@@ -43,6 +44,7 @@ layoutlib-native-linux = { module = "io.johnsonlee:layoutlib-native-linux", vers
 micrometer-registry-promehteus = { module = "io.micrometer:micrometer-registry-prometheus", version = "1.9.5" }
 okio = { module = "com.squareup.okio:okio-jvm", version.ref = "okio" }
 protobuf = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf" }
+sandbox = { module = "io.johnsonlee.playground:sandbox", version.ref = "sandbox" }
 spring-boot = { module = "org.springframework.boot:spring-boot", version.ref = "springboot" }
 spring-context = { module = "org.springframework:spring-context", version.ref = "spring" }
 spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "springboot" }
