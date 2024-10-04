@@ -4,8 +4,8 @@ import org.springframework.boot.gradle.tasks.bundling.BootJar
 plugins {
     kotlin("jvm") version embeddedKotlinVersion
     kotlin("plugin.spring") version embeddedKotlinVersion
-    id("org.springframework.boot") version "2.7.14"
-    id("io.spring.dependency-management") version "1.1.2"
+    id("org.springframework.boot") version "3.3.4"
+    id("io.spring.dependency-management") version "1.1.6"
 }
 
 group = "io.johnsonlee.playground"
@@ -13,7 +13,7 @@ version = "0.1.0"
 
 dependencies {
     implementation(fileTree("libs"))
-    implementation(project(":libs", configuration = "shadow"))
+    implementation(project(":libs"))
     implementation(kotlin("bom"))
     implementation(kotlin("stdlib"))
     implementation(kotlin("reflect"))
@@ -29,7 +29,7 @@ dependencies {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.cloud:spring-cloud-dependencies:2021.0.8")
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:2023.0.2")
     }
 }
 
@@ -41,7 +41,7 @@ subprojects {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "11"
+        jvmTarget = "17"
     }
 }
 
@@ -50,8 +50,8 @@ tasks.withType<Test> {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 val jar by tasks.getting(Jar::class) {

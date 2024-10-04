@@ -84,9 +84,13 @@ dependencies {
     use(libs.androidx.core.ktx)
 }
 
+val jar by tasks.getting(Jar::class) {
+    enabled = false
+}
+
 val shadowJar by tasks.getting(ShadowJar::class) {
     archiveBaseName.set("libs")
-    archiveClassifier.set("all")
+    archiveClassifier.set("")
     archiveVersion.set(project.version.toString())
 
     outputs.upToDateWhen { false }
@@ -122,6 +126,15 @@ val shadowJar by tasks.getting(ShadowJar::class) {
                 into(dest)
             }
         }
+    }
+}
+
+configurations {
+    named("runtimeElements") {
+        outgoing.artifact(shadowJar)
+    }
+    named("apiElements") {
+        outgoing.artifact(shadowJar)
     }
 }
 

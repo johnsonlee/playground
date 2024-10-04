@@ -2,6 +2,8 @@ version: "3.0"
 
 services:
   app:
+    image: johnsonlee/playground:latest
+    platform: linux/amd64
     build:
       context: .
       dockerfile: ./Dockerfile

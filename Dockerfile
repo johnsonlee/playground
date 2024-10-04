@@ -1,3 +1,8 @@
+FROM johnsonlee/gradle-8.3:springboot-3.3.4 AS builder
+WORKDIR /app
+ADD . .
+RUN ./gradlew assemble --no-daemon
+
 FROM ubuntu:latest
 
 ENV ANDROID_SDK_ROOT="/usr/local/android-sdk"
